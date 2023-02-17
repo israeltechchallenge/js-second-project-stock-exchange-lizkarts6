@@ -4,7 +4,7 @@
   font-size: 17px;
 }
 body {
-  background-image: linear-gradient(90deg, #568C69, #E7F2D5);
+  background-image: linear-gradient(90deg, #568c69, #e7f2d5);
   background-attachment: fixed;
 }
 .input-group {
@@ -58,4 +58,11 @@ a:visited:hover {
   width: 50%;
   padding: 10px;
   border-left: 1px solid gainsboro;
+}
+
+.percentage-negative {
+  color: rgb(230, 54, 54);
+}
+.percentage-positive {
+  color: greenyellow;
 }

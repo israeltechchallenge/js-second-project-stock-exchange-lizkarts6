@@ -90,9 +90,7 @@ async function getCompanyChart(urlCharts) {
       },
     },
   };
-  
-  
-      
+
   const myChart = new Chart(document.getElementById("myChart"), config);
 }
 
