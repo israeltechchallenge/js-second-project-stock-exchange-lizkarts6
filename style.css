@@ -66,3 +66,31 @@ a:visited:hover {
 .percentage-positive {
   color: greenyellow;
 }
+
+.visual-aid {
+  font-size: 12px;
+  height: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.marquee {
+  overflow: hidden;
+}
+.marquee > * {
+  white-space: nowrap;
+  position: absolute;
+  animation: marquee 25s linear 0s infinite;
+}
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+  100% {
+    left: 0%;
+    transform: translateX(-100%);
+  }
+}
