@@ -8,7 +8,7 @@ body {
   background-attachment: fixed;
 }
 .input-group {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .search-result-list {
@@ -93,4 +93,20 @@ a:visited:hover {
     left: 0%;
     transform: translateX(-100%);
   }
+}
+
+.symbol-for-marquee {
+  color: black;
+}
+
+.price-for-marquee {
+  color: green;
+}
+
+.style-for-searchlist-name {
+  font-size: 13px;
+}
+
+.style-for-searchlist-symbol {
+  font-size: 12px;
 }

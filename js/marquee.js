@@ -10,7 +10,7 @@ async function fetchMarqueeData(marqueeUrl) {
     symbol = item.symbol;
     price = item.price;
 
-    marqueeDataDisplayer.innerHTML += `<span style="color:black">${symbol}</span> <span style="color:green">$${price} </span> `;
+    marqueeDataDisplayer.innerHTML += `<span class="symbol-for-marquee">${symbol}</span> <span class="price-for-marquee">$${price} </span> `;
   });
 }
 
