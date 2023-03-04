@@ -1,13 +1,12 @@
 let urlParams = new URLSearchParams(window.location.search);
 const symbol = urlParams.get("symbol");
-const companyProfileUrl = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/company/profile/${symbol}`;
+const companyProfileUrl = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/`;
 const spinner = document.getElementById("spinnerForCompany");
 const myChart = document.getElementById("myChart");
-const urlCharts = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/historical-price-full/${symbol}?serietype=line`;
 
 async function fetchCompanyData(companyProfileUrl) {
   spinner.classList.remove("d-none");
-  const response = await fetch(companyProfileUrl);
+  const response = await fetch(`${companyProfileUrl}company/profile/${symbol}`);
   const result = await response.json();
   spinner.classList.add("d-none");
 
@@ -43,8 +42,10 @@ async function fetchCompanyData(companyProfileUrl) {
 
 fetchCompanyData(companyProfileUrl);
 
-async function getCompanyChart(urlCharts) {
-  const response = await fetch(urlCharts);
+async function getCompanyChart(companyProfileUrl) {
+  const response = await fetch(
+    `${companyProfileUrl}historical-price-full/${symbol}?serietype=line`
+  );
   const result = await response.json();
 
   const history = result.historical;
@@ -94,4 +95,4 @@ async function getCompanyChart(urlCharts) {
   const myChart = new Chart(document.getElementById("myChart"), config);
 }
 
-getCompanyChart(urlCharts);
+getCompanyChart(companyProfileUrl);
