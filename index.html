@@ -28,20 +28,11 @@
       <span id="marqueeData"></span>
     </div>
 
-    <h3 class="d-flex justify-content-center mt-5 text-light">Searcg Nasdaq Stock</h3>
-    <div class="input-group d-flex justify-content-center">
-      <div class="form-outline">
-        <input
-          type="search"
-          id="input"
-          class="form-control"
-          placeholder="Search"
-        />
-      </div>
-      <button type="button" class="btn btn-success" id="searchBtn">
-        <i class="fas fa-search"></i>
-      </button>
-    </div>
+    <h3 class="d-flex justify-content-center mt-5 text-light">
+      Search Nasdaq Stock
+    </h3>
+
+    <form class="input-group" id="search-form" role="search"></form>
 
     <div class="d-flex justify-content-center mt-5 d-none" id="spinner">
       <div class="spinner-border" role="status">
@@ -50,12 +41,28 @@
     </div>
 
     <div
-      class="search-result-list d-flex justify-content-center"
-      id="searchResultList"
-    >
-      <ul class="list-group list-group-flush" id="listGroup"></ul>
-    </div>
+      id="search-result"
+      class="search-result-list justify-content-center"
+    ></div>
+
     <script src="js/script.js"></script>
     <script src="js/marquee.js"></script>
+    <script src="js/searchForm.js"></script>
+    <script src="js/searchResults.js"></script>
+    <script>
+      (async function () {
+        const marqueeElement = document.getElementById("marquee");
+        const searchFormElement = document.getElementById("search-form");
+        const searchFormResultElement =
+          document.getElementById("search-result");
+
+        const form = new SearchForm(searchFormElement);
+        const results = new SearchResult(searchFormResultElement);
+
+        form.onSearch((companies) => {
+          results.renderResults(companies);
+        });
+      })();
+    </script>
   </body>
 </html>

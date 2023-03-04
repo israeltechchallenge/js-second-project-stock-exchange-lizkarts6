@@ -1,4 +1,6 @@
 const marqueeDataDisplayer = document.getElementById("marqueeData");
+urlForCompanyInfo =
+  "https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/";
 
 class Marquee {
   constructor(element) {

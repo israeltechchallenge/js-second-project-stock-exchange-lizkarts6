@@ -1,6 +1,6 @@
 * {
   font-family: "Cormorant Garamond", serif;
-  color: whitesmoke;
+  color: black;
   font-size: 17px;
 }
 body {
@@ -11,8 +11,14 @@ body {
   margin-top: 50px;
 }
 
+.search-form {
+  background-color: transparent;
+  border: 1px gray solid;
+}
+
 .search-result-list {
   margin-top: 30px;
+
   text-align: center;
 }
 a:link,
