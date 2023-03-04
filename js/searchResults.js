@@ -33,6 +33,11 @@ class SearchResult {
     makeLink.setAttribute("href", "company.html?symbol=" + symbol);
     makeLink.setAttribute("target", "_blank");
     makeLink.innerHTML = " " + name + " (" + symbol + ") ";
+    const searchValueRegex = new RegExp(this.searchValue, "gi");
+    makeLink.innerHTML = makeLink.innerHTML.replace(
+      searchValueRegex,
+      "<mark class='highlight'>$&</mark>"
+    );
 
     const CompanyIcon = document.createElement("img");
     CompanyIcon.setAttribute("src", image);

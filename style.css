@@ -116,3 +116,7 @@ a:visited:hover {
 .style-for-searchlist-symbol {
   font-size: 12px;
 }
+
+.highlight {
+  background-color: #e7f2d5;
+}
