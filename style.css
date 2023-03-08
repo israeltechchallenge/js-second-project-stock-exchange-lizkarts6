@@ -1,0 +1,122 @@
+* {
+  font-family: "Cormorant Garamond", serif;
+  color: black;
+  font-size: 17px;
+}
+body {
+  background-image: linear-gradient(90deg, #568c69, #e7f2d5);
+  background-attachment: fixed;
+}
+.input-group {
+  margin-top: 50px;
+}
+
+.search-form {
+  background-color: transparent;
+  border: 1px gray solid;
+}
+
+.search-result-list {
+  margin-top: 30px;
+
+  text-align: center;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+a:link:hover,
+a:visited:hover {
+  color: whitesmoke;
+  font-size: 15px;
+}
+
+.list-group-item {
+  background-color: transparent !important;
+}
+
+.spinner-for-company {
+  margin-top: 25%;
+  margin-left: 48%;
+}
+
+.company-header-container {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  align-items: center;
+}
+
+.company-title,
+.company-img,
+.company-price-and-changes {
+  margin: 15px;
+}
+
+.company-info-container {
+  display: flex;
+}
+
+.company-description,
+.company-chart {
+  width: 50%;
+  padding: 10px;
+  border-left: 1px solid gainsboro;
+}
+
+.percentage-negative {
+  color: rgb(230, 54, 54);
+}
+.percentage-positive {
+  color: greenyellow;
+}
+
+.visual-aid {
+  font-size: 12px;
+  height: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.marquee {
+  overflow: hidden;
+}
+.marquee > * {
+  white-space: nowrap;
+  position: absolute;
+  animation: marquee 25s linear 0s infinite;
+}
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+  100% {
+    left: 0%;
+    transform: translateX(-100%);
+  }
+}
+
+.symbol-for-marquee {
+  color: black;
+}
+
+.price-for-marquee {
+  color: green;
+}
+
+.style-for-searchlist-name {
+  font-size: 13px;
+}
+
+.style-for-searchlist-symbol {
+  font-size: 12px;
+}
+
+.highlight {
+  background-color: #e7f2d5;
+}

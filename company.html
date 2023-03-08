@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Company Info</title>
+  </head>
+  <body>
+    <div
+      class="spinner-border text-secondary d-none spinner-for-company"
+      style="width: 2.5rem; height: 2.5rem"
+      id="spinnerForCompany"
+      role="status"
+    ></div>
+    <div class="company-header-container">
+      <h2 class="company-title" id="companyTitle"></h2>
+      <h6 class="company-website" id="companyWebsite"></h6>
+      <div class="company-img" id="companyImg"></div>
+      <div class="company-price-and-changes" id="priceAndChanges">
+        <span id="companyPrice"></span>
+        <span id="priceChange"></span>
+      </div>
+    </div>
+
+    <div class="company-info-container" id="companyInfoContainer">
+      <div class="company-description" id="companyDescription"></div>
+      <div class="company-chart" id="companyChart">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+    <script src="node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="js/companyInfo.js"></script>
+  </body>
+</html>
